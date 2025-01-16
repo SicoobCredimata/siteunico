@@ -1,0 +1,26 @@
+#
+# CONFIGURADO POR MARCUS GABRIEL
+# 20/05/2024 - LEOPOLDINA - MG
+#
+
+RewriteEngine on
+Options +FollowSymLinks +SymLinksIfOwnerMatch
+
+# OCULTA EXTENÇÃO .PHP
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# FORÇA HTTPS
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+php_flag display_errors on
+php_value error_reporting -1
+
+
+<Files config.json>
+    order allow,deny
+    deny from all
+</Files>
