@@ -21,7 +21,7 @@ $title = $_POST['title'];
         background-size: cover;
         width: 100%;
         height: calc(100vh * 0.35);
-        background-image: url('<?php echo $_SERVER['SCRIPT_URI']; ?>libs/brand/predio_sicoob.svg');
+        background-image: url('../libs/brand/predio_sicoob.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
