@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $dataJson = readJson();
     $config = $dataJson['configSystem'];
     $userId = $_SESSION['userId'];
-    $conn = dataBaseConn3();
+    //$conn = dataBaseConn3();
 
 
     if($communication == ''){
