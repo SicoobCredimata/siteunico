@@ -5,9 +5,14 @@ if (isset($_GET['pa'])) {
     $pa = $_GET['pa'];
 
     // Consulta no primeiro banco de dados
-    $query1 = "SELECT * FROM sur_colaboradores WHERE pa = '$pa'";
+    $query1 = "SELECT * FROM sur_colaboradores WHERE pa = '$pa' AND (
+        cargo LIKE '%AGENTE ATENDIMENTO%' OR 
+        cargo LIKE '%AGENTE DE ATENDIMENTO%' OR 
+        cargo LIKE '%GERENTE DE PA%' OR 
+        cargo LIKE '%GERENTE DE AGENCIA%' OR 
+        cargo LIKE '%GERENTE DE RELACIONAMENTO%'
+    )";
     $result1 = $conn->query($query1);
-
 
     $query2 = "SELECT * FROM usr_agencies WHERE pa = '$pa'";
     $result2 = $conn->query($query2);
@@ -43,6 +48,8 @@ if (isset($_GET['pa'])) {
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../libs/toast/toast.css">
+    <link rel="shortcut icon" href="/imgs/system/icons/favicon.svg" type="image/x-icon">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
@@ -55,22 +62,23 @@ if (isset($_GET['pa'])) {
             flex-direction: column;
             align-items: center;
             margin: 0;
-            padding: 0;
-            background-color: #35ad9d;
+            padding: 10px;
+            background-image: url('/../libs/background/fundo_claro.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
         }
 
         .container {
-            width: 60%;
+            width:100%;
             display: flex;
             flex-direction: column;
             margin: 0;
             padding: 0;
             background-color: white;
             box-sizing: border-box;
-
-            h2 {
-                text-align: center;
-            }
+            border: none !important;
+            border-radius: 10px !important;
         }
 
         .header {
@@ -80,13 +88,15 @@ if (isset($_GET['pa'])) {
             align-items: center;
             justify-content: center;
             margin: 0;
-            padding: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         .header img {
-            width: 500px;
+            width: 100%;
             height: auto;
-            margin: 0 10px;
+            border: none;
+            border-radius: 8px;
         }
 
         .layoutForm {
@@ -94,6 +104,7 @@ if (isset($_GET['pa'])) {
             justify-content: center;
             align-items: center;
             text-align: justify;
+
         }
 
         .required {
@@ -177,6 +188,15 @@ if (isset($_GET['pa'])) {
 
         /* Estilos responsivos */
         @media (max-width: 600px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 0px;
+                background-color: #35ad9d
+            }
+
             .container {
                 width: 100%;
                 padding: 10px;
@@ -193,23 +213,22 @@ if (isset($_GET['pa'])) {
     </style>
 </head>
 
+
 <body>
     <ul class="notificationsUl"></ul>
     <div class="container">
         <div class="header">
-            <img src="/../libs/brand/PNG/logoAlnDark2.png" class="img-fluid" alt=""> 
+            <img src="/../libs/brand/JPG/PESQUISA2.jpg" class="img-fluid" alt="">
         </div>
         <div class="layoutForm">
-            <h2>PESQUISA DE ATENDIMENTO AO COOPERADO</h2>
             <form action="teste.php" method="post" id="surveyForm">
                 <div class="form-group">
-                    <label for="cpfAssoc">CPF: <span class="required">*</span></label>
-                    <input type="text" id="cpfAssoc" class="form-control" name="cpfAssoc" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Formato xxx.xxx.xxx-xx">
+                    <label for="cpfCnpjAssoc">CPF/CNPJ: <span class="required">*</span></label>
+                    <input type="text" id="cpfCnpjAssoc" class="form-control" name="cpfCnpjAssoc" required>
                 </div>
                 <p>Os dados informados nesse formulário serão utilizados para elaboração do perfil de associados. Para saber mais sobre como tratamos seus dados pessoais, por favor, acesse nossa Política de Privacidade disponível em:
                     <a href="https://www.sicoob.com.br/lgpd">www.sicoob.com.br/lgpd</a>
                 </p>
-
                 <div class="form-group">
                     <label for="agenciaAssoc">Agência:</label>
                     <input type="text" id="agencia" class="form-control" name="agencia" value="<?php echo htmlspecialchars($agencyName); ?>" readonly disabled>
@@ -289,6 +308,7 @@ if (isset($_GET['pa'])) {
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src='../libs/toast/toast.js'></script>
     <script>
         $(document).ready(function() {
@@ -296,7 +316,7 @@ if (isset($_GET['pa'])) {
                 event.preventDefault();
                 var formData = new FormData(this);
                 formData.append('communication', 'submitSurvey');
-                formData.append('pa', <?= $pa ?> );
+                formData.append('pa', <?= $pa ?>);
 
                 $.ajax({
                     url: '/apis/survey/surveyapi',
@@ -308,6 +328,11 @@ if (isset($_GET['pa'])) {
                         var response = data.response;
                         if (response == "success") {
                             createToast('success', 'Operação salva', 1000);
+                            setTimeout(function() {
+                                updateContainer();
+                            }, 1000); // Aguarda 1 segundo antes de redirecionar
+                        } else if (response == "previouslyregistered") {
+                            createToast('warning', 'Você já respondeu a pesquisa', 1000);
                         } else {
                             createToast('warning', 'Resposta não conhecida', 1000);
                         }
@@ -319,6 +344,27 @@ if (isset($_GET['pa'])) {
             });
         });
 
+        function updateContainer() {
+            $.ajax({
+                url: '/modules/ThankyouPage.html',
+                type: 'GET',
+                success: function(data) {
+                    $('.container').html(data);
+                },
+            });
+        }
+        $('#cpfCnpjAssoc').on('blur', function() {
+            var valor = $(this).val().replace(/\D/g, '');
+            if (valor.length === 11) {
+                $('#type').val('PF');
+                $(this).mask('000.000.000-00');
+            } else if (valor.length === 14) {
+                $('#type').val('PJ');
+                $(this).mask('00.000.000/0000-00');
+            } else {
+                $(this).unmask();
+            }
+        });
     </script>
 </body>
 
