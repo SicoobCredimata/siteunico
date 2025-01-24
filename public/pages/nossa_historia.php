@@ -189,7 +189,7 @@
         <b>Suplentes:</b><br>
         Elias Lamim Mattos;<br>
         Maria José Matos Quintão;<br>
-        Rosemay Teperino Abreu.<br><br>
+        Rosemay Teperino Abreu.<br>
     </div>
     <div class="optionAccordionCredimata" id="3">Diretoria Executiva<i class="fa-solid fa-plus"></i></div>
     <div class="containerAccordionCredimata" id="option3" style="display: none;">
@@ -252,7 +252,6 @@
                 border: 1px solid #00AE9D;
                 border-radius: 100%;
             }
-
         }
     }
 
