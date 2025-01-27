@@ -1,3 +1,10 @@
+<?php
+if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
+    $url = 'https://teste.sicoobcredimata.com.br';
+} else {
+    $url = 'https://sicoobcredimata.coop.br/application';
+}
+?>
 <div class="containerVideoCredimata">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Ojha58xGoqk?si=IHUMjJolP71XvYOX" title="Quem Somos!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -40,37 +47,37 @@
         <div class="carouselContainerCredimata">
             <div class="carouselTrackCredimata">
                 <div class="cardItemCredimata">
-                    <img src="https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/libs/brand/fig/adesao_livre.svg" alt="">
+                    <img src="<?php echo $url; ?>/libs/brand/fig/adesao_livre.svg" alt="">
                     <h3>Adesão livre e voluntária</h3>
                     <span>Cooperativas são organizações voluntárias, abertas a todas as pessoas aptas a utilizar seus serviços e assumir as responsabilidades como membros.</span>
                 </div>
                 <div class="cardItemCredimata">
-                    <img src="https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/libs/brand/fig/gestao_democratica.svg" alt="">
+                    <img src="<?php echo $url; ?>/libs/brand/fig/gestao_democratica.svg" alt="">
                     <h3>Gestão democrática</h3>
                     <span>A democracia é a linha mestra das cooperativas, que são controladas pelos seus membros por meio da participação ativa na formulação das suas políticas e na tomada de decisões.</span>
                 </div>
                 <div class="cardItemCredimata">
-                    <img src="https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/libs/brand/fig/participacao_economica.svg" alt="">
+                    <img src="<?php echo $url; ?>/libs/brand/fig/participacao_economica.svg" alt="">
                     <h3>Participação econômica</h3>
                     <span>Este princípio do cooperativismo trata da contribuição equitativa e controle democrático do capital da cooperativa. As sobras são destinadas com os seguintes propósitos: desenvolvimento da cooperativa, distribuição dos resultados e apoio a outras atividades aprovadas previamente.</span>
                 </div>
                 <div class="cardItemCredimata">
-                    <img src="https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/libs/brand/fig/autonomia.svg" alt="">
+                    <img src="<?php echo $url; ?>/libs/brand/fig/autonomia.svg" alt="">
                     <h3>Autonomia e independência</h3>
                     <span>As cooperativas são organizações autônomas, controladas pelos seus membros. Elas podem firmar acordos com outras organizações e recorrerem a capital externo desde que assegurem o controle democrático dos associados e mantenham a autonomia da cooperativa.</span>
                 </div>
                 <div class="cardItemCredimata">
-                    <img src="https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/libs/brand/fig/educacao.svg" alt="">
+                    <img src="<?php echo $url; ?>/libs/brand/fig/educacao.svg" alt="">
                     <h3>Educação, formação e informação</h3>
                     <span>As cooperativas devem promover a educação e a formação dos seus membros, dos representantes eleitos e dos trabalhadores, de forma que estes possam contribuir da melhor forma para o desenvolvimento de suas organizações.</span>
                 </div>
                 <div class="cardItemCredimata">
-                    <img src="https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/libs/brand/fig/intercooperacao.svg" alt="">
+                    <img src="<?php echo $url; ?>/libs/brand/fig/intercooperacao.svg" alt="">
                     <h3>Intercooperação</h3>
                     <span>A cooperação entre cooperativas é uma ação multilateral de fortalecimento para o bem comum de todos os envolvidos.</span>
                 </div>
                 <div class="cardItemCredimata">
-                    <img src="https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/libs/brand/fig/comunidade.svg" alt="">
+                    <img src="<?php echo $url; ?>/libs/brand/fig/comunidade.svg" alt="">
                     <h3>Interesse pela comunidade</h3>
                     <span>As cooperativas devem investir em projetos economicamente viáveis, ambientalmente corretos e socialmente justos. Expressa-se ainda por meio da atuação sem fins lucrativos e orientada à geração de benefícios sociais e econômicos para toda a sociedade.</span>
                 </div>
@@ -132,17 +139,17 @@
     <!-- Carousel -->
 </div>
 <div class="containerImgCredimata">
-    <img src="https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/public/files/imgs/BANNER_SITE_NOSSA_HOSTORIA.jpg">
+    <img src="<?php echo $url; ?>/public/files/imgs/BANNER_SITE_NOSSA_HOSTORIA.jpg">
     <script>
         var selectImagemCredimata = 0;
 
         function updateImageCredimata() {
             if (selectImagemCredimata == 0) {
                 selectImagemCredimata = 1;
-                document.querySelector('.containerImgCredimata img').src = 'https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/public/files/imgs/BANNER_SITE_NOSSA_HOSTORIA_.jpg';
+                document.querySelector('.containerImgCredimata img').src = '<?php echo $url; ?>/public/files/imgs/BANNER_SITE_NOSSA_HOSTORIA_.jpg';
             } else {
                 selectImagemCredimata = 0;
-                document.querySelector('.containerImgCredimata img').src = 'https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/public/files/imgs/BANNER_SITE_NOSSA_HOSTORIA.jpg';
+                document.querySelector('.containerImgCredimata img').src = '<?php echo $url; ?>/public/files/imgs/BANNER_SITE_NOSSA_HOSTORIA.jpg';
             }
 
             setTimeout(() => {

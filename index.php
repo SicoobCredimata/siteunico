@@ -1,5 +1,9 @@
 <?php
-die(var_dump($_SERVER));
+if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
+    $url = 'https://teste.sicoobcredimata.com.br';
+} else {
+    $url = 'https://sicoobcredimata.coop.br/application';
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,7 +22,7 @@ die(var_dump($_SERVER));
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $.ajax({
-            url: 'https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/public/header',
+            url: '<?php echo $url; ?>/public/header',
             type: 'POST',
             data: {
                 img: 'one',
@@ -33,7 +37,7 @@ die(var_dump($_SERVER));
         });
 
         $.ajax({
-            url: 'https://<?php echo $_SERVER['SSL_TLS_SNI']; ?>/public/body',
+            url: '<?php echo $url; ?>/public/body',
             type: 'POST',
             data: {
                 page: 'nossa_historia'
