@@ -343,7 +343,7 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
         width: 100%;
         height: calc(100vh * 0.90);
         background-color: #7DB61C;
-        background-image: url('/libs/brand/g178.png');
+        background-image: url('<?php echo $url; ?>/libs/brand/g178.png');
         background-repeat: no-repeat;
         background-size: contain;
         background-position-y: 80%;
