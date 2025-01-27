@@ -8,7 +8,7 @@ function readJson()
 
 function dataBaseConn($option = false)
 { //CONEXÃO COM BANCO DE DADOS
-    $dataJson = readJson();
+    //$dataJson = readJson();
     if ($option == true) {
         $dbServer = "172.19.55.218";
         $dbUser = "sicoob09_sicoobcredimata";
