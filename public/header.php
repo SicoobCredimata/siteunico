@@ -1,8 +1,13 @@
 <?php
 header('access-control-allow-origin: *');
+if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
+    $url = 'https://teste.sicoobcredimata.com.br';
+} else {
+    $url = 'https://sicoobcredimata.coop.br/application';
+}
+
 $img = $_POST['img'];
 $title = $_POST['title'];
-
 ?>
 <div class="imageBackgroundCredimata">
     <div class="containerMenuCredimata">
@@ -22,7 +27,7 @@ $title = $_POST['title'];
         background-size: cover;
         width: 100%;
         height: calc(100vh * 0.35);
-        background-image: url('./libs/brand/predio_sicoob.svg');
+        background-image: url('<?php echo $url; ?>/libs/brand/predio_sicoob.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
