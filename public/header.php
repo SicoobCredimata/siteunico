@@ -1,13 +1,15 @@
 <?php
 header('access-control-allow-origin: *');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/scripts/php/functions.php');
+
 if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
     $url = 'https://teste.sicoobcredimata.com.br';
 } else {
     $url = 'https://sicoobcredimata.coop.br/application';
 }
 
-$img = $_POST['img'];
-$title = $_POST['title'];
+$img = $_POST['img'] = 'teste';
+$title = $_POST['title'] = 'teste';
 
 $conn = dataBaseConn(true);
 $datetime = date('Y-m-d H:i:s');
