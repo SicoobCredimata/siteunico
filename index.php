@@ -1,3 +1,6 @@
+<?php
+var_dump($_SERVER);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
