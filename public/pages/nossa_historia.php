@@ -1,4 +1,5 @@
 <?php
+header('access-control-allow-origin: *');
 if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
     $url = 'https://teste.sicoobcredimata.com.br';
 } else {

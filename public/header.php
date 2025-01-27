@@ -1,4 +1,5 @@
 <?php
+header('access-control-allow-origin: *');
 $img = $_POST['img'];
 $title = $_POST['title'];
 
