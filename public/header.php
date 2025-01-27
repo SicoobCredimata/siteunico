@@ -1,6 +1,6 @@
 <?php
 header('access-control-allow-origin: *');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/scripts/php/functions.php');
+require_once('../scripts/php/functions.php');
 
 if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
     $url = 'https://teste.sicoobcredimata.com.br';
