@@ -6,6 +6,11 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
     $url = 'https://sicoobcredimata.coop.br/application';
 }
 
+$conn = dataBaseConn(true);
+$datetime = date('Y-m-d H:i:s');
+$address = $_SERVER['REMOTE_ADDR'];
+$conn->query("INSERT INTO visitas (address, page, date) VALUES ('$address', 'Nossa História', '$datetime')");
+
 $img = $_POST['img'];
 $title = $_POST['title'];
 ?>
