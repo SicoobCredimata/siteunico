@@ -8,8 +8,8 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
     $url = 'https://sicoobcredimata.coop.br/application';
 }
 
-$img = $_POST['img'] = 'teste';
-$title = $_POST['title'] = 'teste';
+$img = $_POST['img'];
+$title = $_POST['title'];
 
 $conn = dataBaseConn(true);
 $datetime = date('Y-m-d H:i:s');
