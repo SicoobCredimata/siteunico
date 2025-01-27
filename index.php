@@ -1,5 +1,5 @@
 <?php
-var_dump($_SERVER);
+die(var_dump($_SERVER));
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
