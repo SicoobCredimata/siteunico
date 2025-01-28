@@ -316,7 +316,7 @@ if (isset($_GET['pa'])) {
                 event.preventDefault();
                 var formData = new FormData(this);
                 formData.append('communication', 'submitSurvey');
-                formData.append('pa', <?= $pa ?>);
+                formData.append('pa', '<?= $pa ?>');
 
                 $.ajax({
                     url: '../apis/survey/surveyapi',
@@ -353,6 +353,7 @@ if (isset($_GET['pa'])) {
                 },
             });
         }
+
         $('#cpfCnpjAssoc').on('blur', function() {
             var valor = $(this).val().replace(/\D/g, '');
             if (valor.length === 11) {
