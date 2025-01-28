@@ -218,7 +218,7 @@ if (isset($_GET['pa'])) {
     <ul class="notificationsUl"></ul>
     <div class="container">
         <div class="header">
-            <img src="/../libs/brand/JPG/PESQUISA2.jpg" class="img-fluid" alt="">
+            <img src="../libs/brand/JPG/PESQUISA2.jpg" class="img-fluid" alt="">
         </div>
         <div class="layoutForm">
             <form action="teste.php" method="post" id="surveyForm">
