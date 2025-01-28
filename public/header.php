@@ -18,7 +18,7 @@ $conn->query("INSERT INTO visitas (address, page, date) VALUES ('$address', '$ti
 ?>
 <div class="imageBackgroundCredimata">
     <div class="containerMenuCredimata">
-        <span class="menuNavigationCredimata"><i class="fa-solid fa-house-chimney"></i> Sicoob Credimata <i class="fa-solid fa-caret-right"></i> Nossa História</span>
+        <span class="menuNavigationCredimata"><i class="fa-solid fa-house-chimney"></i> Sicoob Credimata <i class="fa-solid fa-caret-right"></i> <?php echo $title; ?></span>
         <div class="containerTitleSicoobCredimata">
             <span class="titleCredimata"><?php echo $title; ?></span>
         </div>

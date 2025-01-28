@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/scripts/php/functions.php');
+require_once('../scripts/php/functions.php');
 $conn = dataBaseConn();  // base agencia
 if (isset($_GET['pa'])) {
     $pa = $_GET['pa'];
