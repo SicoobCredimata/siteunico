@@ -319,7 +319,7 @@ if (isset($_GET['pa'])) {
                 formData.append('pa', <?= $pa ?>);
 
                 $.ajax({
-                    url: '/apis/survey/surveyapi',
+                    url: '../apis/survey/surveyapi',
                     type: 'POST',
                     data: formData,
                     processData: false,
