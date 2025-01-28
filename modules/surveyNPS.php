@@ -1,6 +1,6 @@
 <?php
 require_once('../scripts/php/functions.php');
-$conn = dataBaseConn();  // base agencia
+$conn = dataBaseConn(true);  // base agencia
 if (isset($_GET['pa'])) {
     $pa = $_GET['pa'];
 
