@@ -70,7 +70,7 @@ if (isset($_GET['pa'])) {
         }
 
         .container {
-            width:100%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             margin: 0;
@@ -181,12 +181,9 @@ if (isset($_GET['pa'])) {
 
         .form-check-input:checked {
             background-color: #0d3541;
-            /* Cor de fundo quando selecionado */
             border-color: #0d3541;
-            /* Cor da borda quando selecionado */
         }
 
-        /* Estilos responsivos */
         @media (max-width: 600px) {
             body {
                 display: flex;
@@ -201,6 +198,13 @@ if (isset($_GET['pa'])) {
                 width: 100%;
                 padding: 10px;
 
+            }
+
+            .header img {
+                width: 100vw;
+                height: auto;
+                border: none;
+                border-radius: 8px;
             }
 
             .form-group input[type="text"],

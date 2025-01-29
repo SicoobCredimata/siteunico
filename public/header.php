@@ -10,11 +10,12 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
 
 $img = $_POST['img'];
 $title = $_POST['title'];
+$color = $_POST['color'];
 
 $conn = dataBaseConn(true);
 $datetime = date('Y-m-d H:i:s');
 $address = $_SERVER['REMOTE_ADDR'];
-$conn->query("INSERT INTO visitas (address, page, date) VALUES ('$address', '$title', '$datetime')");
+//$conn->query("INSERT INTO visitas (address, page, date) VALUES ('$address', '$title', '$datetime')");
 ?>
 <div class="imageBackgroundCredimata">
     <div class="containerMenuCredimata">
@@ -34,7 +35,7 @@ $conn->query("INSERT INTO visitas (address, page, date) VALUES ('$address', '$ti
         background-size: cover;
         width: 100%;
         height: calc(100vh * 0.35);
-        background-image: url('<?php echo $url; ?>/libs/brand/predio_sicoob.svg');
+        background-image: url('<?php echo $url . $img; ?>');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -52,7 +53,7 @@ $conn->query("INSERT INTO visitas (address, page, date) VALUES ('$address', '$ti
             gap: 20px;
 
             .containerTitleSicoobCredimata {
-                background-color: #00AE9D;
+                background-color: <?php echo '#' . $color; ?>;
                 border-radius: 15px;
                 width: 100%;
                 height: 50%;
@@ -65,6 +66,7 @@ $conn->query("INSERT INTO visitas (address, page, date) VALUES ('$address', '$ti
                     justify-content: center;
                     font-size: 2rem;
                     color: #ffffff !important;
+                    font-weight: bold;
                 }
             }
 

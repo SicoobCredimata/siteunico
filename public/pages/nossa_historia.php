@@ -140,17 +140,17 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
     <!-- Carousel -->
 </div>
 <div class="containerImgCredimata">
-    <img src="<?php echo $url; ?>/public/files/imgs/BANNER_SITE_NOSSA_HOSTORIA.jpg">
+    <img src="<?php echo $url; ?>/public/files/imgs/d9eca23b-ee23-4cab-8713-893f9bbf66da.jpg">
     <script>
         var selectImagemCredimata = 0;
 
         function updateImageCredimata() {
             if (selectImagemCredimata == 0) {
                 selectImagemCredimata = 1;
-                document.querySelector('.containerImgCredimata img').src = '<?php echo $url; ?>/public/files/imgs/BANNER_SITE_NOSSA_HOSTORIA_.jpg';
+                document.querySelector('.containerImgCredimata img').src = '<?php echo $url; ?>/public/files/imgs/d9eca23b-ee23-4cab-8713-893f9bbf66da.jpg';
             } else {
                 selectImagemCredimata = 0;
-                document.querySelector('.containerImgCredimata img').src = '<?php echo $url; ?>/public/files/imgs/BANNER_SITE_NOSSA_HOSTORIA.jpg';
+                document.querySelector('.containerImgCredimata img').src = '<?php echo $url; ?>/public/files/imgs/d8fcb6d0-2278-49a1-969e-b6619b7e3fd0.jpg';
             }
 
             setTimeout(() => {
@@ -259,6 +259,12 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
                 color: #00AE9D;
                 border: 1px solid #00AE9D;
                 border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
@@ -346,7 +352,7 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
         background-image: url('<?php echo $url; ?>/libs/brand/g178.png');
         background-repeat: no-repeat;
         background-size: contain;
-        background-position-y: 80%;
+        background-position-y: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
