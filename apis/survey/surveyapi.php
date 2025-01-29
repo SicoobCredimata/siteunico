@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if ($communication == 'submitSurvey') {
-        $conn = dataBaseConn();
+        $conn = dataBaseConn(true);
         $pa = isset($_POST['pa']) ? trim($_POST['pa']) : '';
         $cpfCnpjAssoc = isset($_POST['cpfCnpjAssoc']) ? trim($_POST['cpfCnpjAssoc']) : '';
         $nameColab = isset($_POST['nameColab']) ? trim($_POST['nameColab']) : '';
