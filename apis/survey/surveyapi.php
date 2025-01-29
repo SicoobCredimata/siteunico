@@ -5,7 +5,7 @@ $dateTimeStr = date('Y-m-d H:i');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     session_start();
-    require_once('../scripts/php/functions.php');
+    require_once('../../scripts/php/functions.php');
     $communication = trim($_POST['communication']);
 
 
