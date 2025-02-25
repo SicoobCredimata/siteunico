@@ -100,7 +100,7 @@ if (isset($_GET['pa'])) {
         }
 
         .layoutForm {
-            padding: 5px;
+            padding: 20px;
             justify-content: center;
             align-items: center;
             text-align: justify;
@@ -138,7 +138,7 @@ if (isset($_GET['pa'])) {
         .formvalueAtendCordi,
         .formvalueAtendProbab {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
@@ -147,8 +147,10 @@ if (isset($_GET['pa'])) {
         .formvalueAtendCordiOption,
         .formvalueAtendProbabOption {
             display: inline-block;
-            width: 9%;
+            width: calc(100% / 11 - 10px);
             box-sizing: border-box;
+            text-align: center;
+            margin: 0 5px;
         }
 
         .ButtonSubmit {
@@ -174,9 +176,7 @@ if (isset($_GET['pa'])) {
 
         .form-control:focus {
             border-color: #0d3541;
-            /* Cor da borda ao focar */
             box-shadow: 0 0 0 0.1rem #0d3541;
-            /* Sombra ao focar */
         }
 
         .form-check-input:checked {
