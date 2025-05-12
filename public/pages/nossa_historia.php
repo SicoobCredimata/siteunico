@@ -23,6 +23,22 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
         </span>
     </div>
 </div>
+<div class="imagemMuitoboaCredimata">
+    <img src="/imgs/body/5c96d3ff-036f-4b0c-bb05-7961536b892e.png">
+    <style>
+        .imagemMuitoboaCredimata {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+
+            img {
+                width: 50%;
+            }
+        }
+    </style>
+</div>
 <div class="containerCardsCredimata">
     <div class="cardCredimata" id="verdeclaro">
         <span class="titleCardCredimata">Credibilidade</span>

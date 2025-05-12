@@ -24,12 +24,12 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
         var url = 'https://teste.sicoobcredimata.com.br';
 
         $.ajax({
-            url: url + '/public/header',
+            url: url + '/public/header.php',
             type: 'POST',
             data: {
-                img: '/imgs/headers/c1a524a6-acbd-4e6a-b894-711e8af2f2ed.svg',
-                color: '7ab62f',
-                title: 'Relatórios'
+                img: '/imgs/headers/17c156fe-fdcf-4a10-a4a3-9325c53d7daf.svg',
+                color: '36ad9c',
+                title: 'Nossa História'
             },
             success: function(response) {
                 $('.headerCredimata').html(response);
@@ -40,10 +40,10 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
         });
 
         $.ajax({
-            url: url + '/public/body',
+            url: url + '/public/body.php',
             type: 'POST',
             data: {
-                page: 'relatorios'
+                page: 'nossa_historia'
             },
             success: function(response) {
                 $('.bodyCredimata').html(response);
