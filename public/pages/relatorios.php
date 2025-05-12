@@ -31,7 +31,7 @@ $conn = dataBaseConn(true);
                     if ($result2->num_rows > 0) {
                         while ($row2 = $result2->fetch_assoc()) {
                             //substituir a caractere vazia
-                            $name = str_replace(' ', '', $row['name']);
+                            $name = @str_replace(' ', '', $row['name']);
                             echo "<div class='buttonRelatorioYearSicoobCredimata' id='$name'>{$row2['name']}</div>";
                             echo "<div class='optionOpenRelatorioSicoobCredimata' id='$name{$row2['name']}' style='display: none;'>";
                             echo "<div class='buttonBackSicoobCredimata'>Voltar</div>";
