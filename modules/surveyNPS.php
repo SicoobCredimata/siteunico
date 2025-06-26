@@ -246,7 +246,9 @@ if (isset($_GET['pa'])) {
                         <option value="" selected disabled>Selecione</option>
                         <?php
                         foreach ($colaboradores as $colaborador) {
-                            //maiusculo sempre!
+                            if ($colaborador['nameColab'] == '') {
+                                continue;
+                            }
                             $colaborador['nameColab'] = strtoupper($colaborador['nameColab']);
                             echo "<option value='{$colaborador['id']}'>{$colaborador['nameColab']}</option>";
                         }
