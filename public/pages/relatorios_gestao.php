@@ -21,7 +21,7 @@ $uuid = "8b3ef3de-fb73-4586-9010-542d264d4e73.pdf";
 </div>
 <script>
     function downloadCredimata() {
-        let url = 'https://84v1v7-my.sharepoint.com/personal/marcus_xavier_bunnytech_com_br/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2Fmarcus%5Fxavier%5Fbunnytech%5Fcom%5Fbr%2FDocuments%2Fsicoobcredimata%2F8b3ef3de%2Dfb73%2D4586%2D9010%2D542d264d4e73%2Epdf';
+        let url = '<?= $url; ?>/public/files/documents/<?php echo $uuid; ?>';
         let link = document.createElement('a');
         link.href = url;
         link.download = 'Relatório de Gestão 2024.pdf';
@@ -31,7 +31,7 @@ $uuid = "8b3ef3de-fb73-4586-9010-542d264d4e73.pdf";
     }
 
     function openCredimata() {
-        let url = 'https://84v1v7-my.sharepoint.com/personal/marcus_xavier_bunnytech_com_br/Documents/sicoobcredimata/8b3ef3de-fb73-4586-9010-542d264d4e73.pdf';
+        let url = '<?= $url; ?>/public/files/documents/<?php echo $uuid; ?>';
         window.open(url, '_blank');
     }
 </script>
