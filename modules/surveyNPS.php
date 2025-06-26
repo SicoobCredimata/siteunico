@@ -12,7 +12,7 @@ if (isset($_GET['pa'])) {
         cargo LIKE '%GERENTE DE AGENCIA%' OR 
         cargo LIKE '%GERENTE DE RELACIONAMENTO%' OR
         cargo LIKE '%estagiário%' OR
-        cargo LIKE '%ESTAGIÁRIO%' OR
+        cargo LIKE '%ESTAGIÁRIO%'
     )";
     $result1 = $conn->query($query1);
 
