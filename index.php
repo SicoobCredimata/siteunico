@@ -21,7 +21,7 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
     <div class="bodyCredimata"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        var url = 'https://teste.sicoobcredimata.com.br';
+        var url = 'https://sicoobcredimata.coop.br/application';
 
         $.ajax({
             url: url + '/public/header.php',
@@ -29,7 +29,7 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
             data: {
                 img: '/imgs/headers/17c156fe-fdcf-4a10-a4a3-9325c53d7daf.svg',
                 color: '36ad9c',
-                title: 'Nossa História'
+                title: 'Relatórios de Gestão',
             },
             success: function(response) {
                 $('.headerCredimata').html(response);
@@ -43,7 +43,7 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
             url: url + '/public/body.php',
             type: 'POST',
             data: {
-                page: 'nossa_historia'
+                page: 'relatorios_gestao',
             },
             success: function(response) {
                 $('.bodyCredimata').html(response);
