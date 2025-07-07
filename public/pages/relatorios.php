@@ -306,20 +306,6 @@ $conn = dataBaseConn(true);
                                     }
                                 }
                             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         }
 
                         .buttonBackSicoobCredimata {
