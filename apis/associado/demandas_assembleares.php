@@ -22,6 +22,10 @@ sendMail(array(
         [
             'luciana.anjos@sicoobcredimata.com.br',
             'Luciana Pires'
+        ],
+        [
+            'gabriella.carraro@sicoobcredimata.com.br',
+            'Gabriella Carraro'
         ]
     ],
     'files' => [],
