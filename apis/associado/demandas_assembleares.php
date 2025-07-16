@@ -1,6 +1,6 @@
 <?php
-
 require_once('../../scripts/php/functions.php');
+header('access-control-allow-origin: *');
 
 $name = isset($_POST['name']) && $_POST['name'] !== '' ? $_POST['name'] : "N/A";
 $email = isset($_POST['email']) && $_POST['email'] !== '' ? $_POST['email'] : "N/A";
