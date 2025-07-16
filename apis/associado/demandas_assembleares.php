@@ -18,7 +18,12 @@ sendMail(array(
             'Diretoria Sicoob Credimata'
         ]
     ],
-    'cc' => [],
+    'cc' => [
+        [
+            'luciana.anjos@sicoobcredimata.com.br',
+            'Luciana Pires'
+        ]
+    ],
     'files' => [],
     'mail' => [
         'Sugestão Assemblear',
