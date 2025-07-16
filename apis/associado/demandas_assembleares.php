@@ -31,3 +31,5 @@ sendMail(array(
         'notHtml'
     ]
 ));
+
+echo "Sugestão enviada com sucesso!";
