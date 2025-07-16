@@ -14,16 +14,11 @@ $emailBody = "<p>Sugestão assemblear registrada por <strong>{$name}</strong> ({
 sendMail(array(
     'to' => [
         [
-            'marcus.geraldino@sicoobcredimata.com.br',
-            'Marcus Gabriel Xavier'
+            'diretoria@sicoobcredimata.com.br',
+            'Diretoria Sicoob Credimata'
         ]
     ],
-    'cc' => [
-        [
-            'marcusgx45@gmail.com',
-            'Marcus Gabriel Xavier Geraldino'
-        ]
-    ],
+    'cc' => [],
     'files' => [],
     'mail' => [
         'Sugestão Assemblear',
