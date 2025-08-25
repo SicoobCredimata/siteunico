@@ -204,17 +204,6 @@ if ($_SERVER['SSL_TLS_SNI'] == 'teste.sicoobcredimata.com.br') {
         Márcio Américo Lima Verardo;<br>
         Pedro Henrique Junqueira Reis.<br>
     </div>
-    <div class="optionAccordionCredimata" id="2">Conselho Fiscal<i class="fa-solid fa-plus"></i></div>
-    <div class="containerAccordionCredimata" id="option2" style="display: none;">
-        <b>Efetivos:</b><br>
-        Marisa Meirelles Pereira Rocha;<br>
-        Narciso Detoni Júnior;<br>
-        Neemias Vargas de Oliveira.<br><br>
-        <b>Suplentes:</b><br>
-        Elias Lamim Mattos;<br>
-        Maria José Matos Quintão;<br>
-        Rosemay Teperino Abreu.<br>
-    </div>
     <div class="optionAccordionCredimata" id="3">Diretoria Executiva<i class="fa-solid fa-plus"></i></div>
     <div class="containerAccordionCredimata" id="option3" style="display: none;">
         <b>Diretor de Negócios:</b> Ricardo Machado da Silveira <br>
